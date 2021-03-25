@@ -361,9 +361,9 @@ def home():
         return render_template('index.html',prediction_text="Your Flight price is Rs. {}".format(output))
 
    
-const PORT = process.env.PORT || '8080'
-app=express();
-app.set("port",PORT);
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
 
 if __name__ == '__main__':
     app.run()
