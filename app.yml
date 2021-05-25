@@ -1,5 +1,5 @@
 runtime: python
-env: flex
+env: true
 entrypoint: gunicorn -b :$PORT main:flask_api
 
 runtime_config:
